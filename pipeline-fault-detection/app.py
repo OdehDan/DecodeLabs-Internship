@@ -4,8 +4,8 @@ import pandas as pd
 import os
 
 base_path = os.path.dirname(__file__)
-model = joblib.load("model.pkl")
-scaler = joblib.load("scaler.pkl")
+model = joblib.load(os.path.join(base_path, "model.pkl"))
+scaler = joblib.load(os.path.join(base_path, "scaler.pkl")
 st.title("Pipeline Fault Prediction")
 
 segment_id = st.number_input("Segment ID", value=50.00)
