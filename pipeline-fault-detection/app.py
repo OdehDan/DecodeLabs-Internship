@@ -1,6 +1,9 @@
 import joblib
 import streamlit as st
 import pandas as pd
+import os
+
+base_path = os.path.dirname(__file__)
 model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")
 st.title("Pipeline Fault Prediction")
